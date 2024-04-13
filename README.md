@@ -48,7 +48,7 @@ Comando para ejecutar:
 rails earthquake_data:fetch_and_save
 
 
-EndPoint Solicitado para Búsqueda de Features
+### EndPoint para Búsqueda de Features
 * Filtración por mag_type y paginación añadidas.
 * URL de ejemplo: http://localhost:3000/api/features?page=1&per_page=2&mag_type[]=md&mag_type[]=ml&mag_type[]=mb
 * Ejemplo de Respuesta:
@@ -83,8 +83,20 @@ EndPoint Solicitado para Búsqueda de Features
   }
 } 
 ```
-#### Nota:
+### Nota:
 - **No se logró que el atributo 'tsunami' se guardara como falso (booleano); se optó por guardarlo como cadena de texto realizando una validación para determinar si era 0 o 1 según correspondiera.**
+
+#### Crear un Commentario
+- **URL**: `http://localhost:3000/api/features/:feature_id/comments/create`
+- **Método**: GET
+- **Parámetros**:
+  - `feature_id`: Corresponde al ID asignado a un feature
+  - **Ejemplo de cuerpo de la consulta**:
+  ```json
+  {
+    "body": "Este es un comentario de ejemplo"
+  }
+
 
 ### Endpoints Adicionales 
 
