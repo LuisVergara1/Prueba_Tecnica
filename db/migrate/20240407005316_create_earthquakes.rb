@@ -1,4 +1,4 @@
-class CreateEarthquakes < ActiveRecord::Migration[7.1]
+class CreateEarthquakes < ActiveRecord::Migration[6.1]
   def change
     create_table :earthquakes do |t|
       t.string :external_id, null: false

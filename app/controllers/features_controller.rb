@@ -2,10 +2,10 @@ class FeaturesController < ApplicationController
   skip_before_action :verify_authenticity_token
   #EndPoint para Filtrar por Mag_Type y paginación
   def search
-    features = Earthquake.all
 
-    if params[:mag_type].present?
-      mag_types = Array(params[:mag_type]) # Convertir a un arreglo si no lo es
+    features = Earthquake.all
+    if params[:mag_type].present?&& params[:mag_type].any?(&:present?)
+      mag_types = Array(params[:mag_type]).reject(&:empty?)
       clean_mag_types = mag_types.map { |mag_type| mag_type.gsub(/[^a-zA-Z]/, '') }
       features = features.where(mag_type: clean_mag_types)
     end

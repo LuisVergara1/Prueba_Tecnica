@@ -8,6 +8,7 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.enable_reloading = true
 
+  config.hosts.clear
   # Do not eager load code on boot.
   config.eager_load = false
 
@@ -62,6 +63,8 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+
+
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
@@ -72,5 +75,5 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   # Raise error when a before_action's only/except options reference missing actions
-  config.action_controller.raise_on_missing_callback_actions = true
+#  config.action_controller.raise_on_missing_callback_actions = true
 end

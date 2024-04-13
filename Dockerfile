@@ -1,4 +1,4 @@
-FROM ruby:3.3.0
+FROM ruby:3.0.0
 
 # Instalar dependencias del sistema
 RUN apt-get update && \
