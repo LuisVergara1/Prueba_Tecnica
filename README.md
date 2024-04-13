@@ -6,10 +6,9 @@ Este documento detalla los logros y aspectos pendientes de la prueba técnica.
 
 - El backend se desplegó en un servidor VPS utilizando Docker y Docker Compose.
 - El frontend fue desarrollado con Angular.
-  - URL: `https://pt.luisvergara.dev`
+  - Sitio web : [pt.luisvergara.dev](https://pt.luisvergara.dev)
   - La web estará disponible hasta el 30 de abril.
-  - Repositorio GitHub del Frontend: [GitHub Front URL]()
-
+  - Repositorio GitHub del Frontend: [GitHub Front URL](https://github.com/LuisVergara1/Prueba_TecnicaAngular)
 ## Backend
 
 El backend se desarrolló utilizando Ruby on Rails:
@@ -52,6 +51,7 @@ EndPoint Solicitado para Búsqueda de Features
 * Filtración por mag_type y paginación añadidas.
 * URL de ejemplo: http://localhost:3000/api/features?page=1&per_page=2&mag_type[]=md&mag_type[]=ml&mag_type[]=mb
 * Ejemplo de Respuesta:
+ ```json
 {
   "data": [
     {
@@ -80,10 +80,10 @@ EndPoint Solicitado para Búsqueda de Features
     "total": 3359,
     "per_page": 1
   }
-}
-
-Nota: No se logró que el atributo 'tsunami' se guardara como falso (booleano); se optó por guardarlo como cadena de texto realizando una validación para determinar si era 0 o 1 según correspondiera.
-
+} 
+```
+#### Nota:
+- **No se logró que el atributo 'tsunami' se guardara como falso (booleano); se optó por guardarlo como cadena de texto realizando una validación para determinar si era 0 o 1 según correspondiera.**
 
 ### Endpoints Adicionales 
 
