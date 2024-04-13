@@ -17,11 +17,12 @@ El backend se desarrolló utilizando Ruby on Rails:
 - Implementación de una base de datos utilizando PostgreSQL.
   - Para configurar las credenciales de la base de datos, tiene las siguientes opciones:
     1. Crear un archivo `.env` en la raíz del proyecto con las siguientes variables:
-       - `DB_USER=postgres`
+       - `DB_USER=postgres` 
        - `DB_PASSWORD=postgres`
        - `DB_HOST=localhost`
        - `DB_PORT=5432`
        - `DB_NAME=postgres`
+       #### Modificar Valores de las variables Segun corresponda 
     2. Modificar el archivo `config/database.yml` con sus credenciales.
 
 - Por temas de seguridad CSRF, se agregó la línea `skip_before_action :verify_authenticity_token` a los controladores, lo cual no es recomendable en producción.
