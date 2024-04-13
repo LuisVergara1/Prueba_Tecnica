@@ -83,10 +83,10 @@ rails earthquake_data:fetch_and_save
   }
 } 
 ```
-### Nota:
+#### Nota:
 - **No se logró que el atributo 'tsunami' se guardara como falso (booleano); se optó por guardarlo como cadena de texto realizando una validación para determinar si era 0 o 1 según correspondiera.**
 
-#### Crear un Commentario
+### EndPoint para  Crear un Commentario
 - **URL**: `http://localhost:3000/api/features/:feature_id/comments/create`
 - **Método**: GET
 - **Parámetros**:
