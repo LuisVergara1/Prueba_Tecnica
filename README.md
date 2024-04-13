@@ -84,11 +84,11 @@ rails earthquake_data:fetch_and_save
 } 
 ```
 #### Nota:
-- **No se logró que el atributo 'tsunami' se guardara como falso (booleano); se optó por guardarlo como cadena de texto realizando una validación para determinar si era 0 o 1 según correspondiera.**
+- **No se logró que el atributo 'tsunami' se guardara como false (booleano); se optó por guardarlo como string realizando una validación para determinar si era 0 o 1 según correspondiera.**
 
 ### EndPoint para  Crear un Commentario
 - **URL**: `http://localhost:3000/api/features/:feature_id/comments/create`
-- **Método**: GET
+- **Método**: POST
 - **Parámetros**:
   - `feature_id`: Corresponde al ID asignado a un feature
   - **Ejemplo de cuerpo de la consulta**:
@@ -96,7 +96,6 @@ rails earthquake_data:fetch_and_save
   {
     "body": "Este es un comentario de ejemplo"
   }
-
 
 ### Endpoints Adicionales 
 
@@ -120,3 +119,11 @@ rails earthquake_data:fetch_and_save
   {
     "body": "Este es un comentario de ejemplo actualizado"
   }
+
+#### 4. Eliminar un Comentario
+- **URL**: `http://localhost:3000/api/features/:comment_id/comments/delete`
+- **Método**: DELETE
+- **Parámetros**:
+  - `comment_id`: Corresponde al ID asignado al crear el comentario.
+
+
